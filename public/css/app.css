@@ -1,0 +1,147 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+html,body{
+    height: 100%;
+}
+
+.light-theme .navbar{
+    background: white;
+}
+
+.dark-theme .navbar{
+    background: black;
+    color: rgb(197, 197, 197);
+}
+
+.body-welcome{
+    width: 100%;
+    height:100%;
+    background: url(/img/rabstol_net_canada_31.jpg) center top no-repeat fixed ;
+    background-size: cover;
+}
+
+/*register-login form*/
+
+.form-auth{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 150px auto;
+    padding: 40px;
+    font-size: 20px;
+    border-radius: 7px;
+    width: 600px;
+}
+
+.light-theme .form-auth{
+    color: black;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.dark-theme .form-auth{
+    color: rgb(197, 197, 197);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.form-auth h3{
+    text-transform: uppercase;
+}
+
+.form-auth .input-div{
+    width: 100%;
+    margin-top: 60px;
+    position: relative;
+}
+
+.form-auth .input-100 .input-name {
+    width: 45%;
+    position: relative;
+}
+
+.form-auth .input-100{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-auth .input-div label{
+    margin-top: 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.form-auth input[type='text'],
+.form-auth input[type='password']{
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.light-theme .form-auth input[type='text'],
+.light-theme .form-auth input[type='password']{
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+.dark-theme .form-auth input[type='text'],
+.dark-theme .form-auth input[type='password']{
+    color: rgb(197, 197, 197);
+    border-bottom: 2px solid white;
+}
+
+.form-auth .input-div input:focus ~ label,
+.form-auth .input-div input:valid ~ label,
+.form-auth .input-div .input-name input:focus ~ label,
+.form-auth .input-div .input-name input:valid ~ label{
+    font-size: 15px;
+    top: -20px;
+    left: 0px;
+}
+
+.form-auth label{
+    margin-top: 15px;
+    align-self: flex-start;
+}
+
+.form-auth label input{
+    margin-right: 5px;
+    outline: none;
+}
+
+.form-auth input[type='submit']{
+    text-transform: uppercase;
+    font-weight: 500;
+    padding:0px 5px;
+    background: transparent;
+    border: none;
+    margin-top: 30px;
+    align-self: flex-start;
+}
+
+.form-auth input[type='submit']:hover{
+    border-radius: 2px;
+}
+
+.light-theme .form-auth input[type='submit']{
+    color: black;
+}
+
+.light-theme .form-auth input[type='submit']:hover{
+    color: rgb(197, 197, 197);
+    background: black;
+}
+
+.dark-theme .form-auth input[type='submit']{
+    color: rgb(197, 197, 197);
+}
+
+.dark-theme .form-auth input[type='submit']:hover{
+    color: black;
+    background: rgb(197, 197, 197);
+}
