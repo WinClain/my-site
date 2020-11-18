@@ -19343,8 +19343,20 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+var boddyPage = document.querySelector('.boddy');
+var buttonTheme = document.querySelector('#theme-button');
 var passwordInput = document.querySelector('.input-password');
 var checkShowPassword = document.querySelector('#show-password');
+
+buttonTheme.onclick = function () {
+  if (boddyPage.classList.contains('dark-theme')) {
+    boddyPage.classList.remove('dark-theme');
+    boddyPage.classList.add('light-theme');
+  } else {
+    boddyPage.classList.remove('light-theme');
+    boddyPage.classList.add('dark-theme');
+  }
+};
 
 checkShowPassword.onchange = function () {
   if (checkShowPassword.checked) {

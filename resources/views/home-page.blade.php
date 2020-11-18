@@ -1,10 +1,12 @@
-@extends('html')
+@extends('layouts.html')
 
 @section('title')
     
 @endsection
 
 @section('content')
-    <h1>Hello</h1>
+    <div class="container">
+        
+    </div>
     
 @endsection

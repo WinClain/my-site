@@ -1,5 +1,4 @@
-@extends('html')
-
+@extends('layouts.html')
 
 
 @section('title')
@@ -7,10 +6,6 @@ register
 @endsection
 
 
-
-@section('boddy-class')
-    class='body-welcome dark-theme'
-@endsection
 
 @section('content')
           
@@ -20,31 +15,30 @@ register
 
                @csrf
 
-                  @if ($errors->any())
-                    <div class=" alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
+               @if ($errors->any())
+                  <div class="alert--error-valid">
+                     <ul>
+                        @foreach ($errors->all() as $error)
                               <li>{{$error}}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                      
-                  @endif
+                        @endforeach
+                     </ul>
+                  </div>
+               @endif
 
                <div class="input-div  input-100">
                     <div class="input-name">
-                      <input type="text" name="name" id="name" required>
+                      <input type="text" name="name" id="name" required value="{{ Request::old('name') ?: '' }}">
                       <label for="name"> name</label>
                     </div>
                     <div class="input-name">
-                      <input type="text" name="lastname" id="lastname" required>
+                      <input type="text" name="lastname" id="lastname" required value="{{ Request::old('lastname') ?: '' }}">
                       <label for="lastname">lastname</label>
                     </div> 
                   
                </div>
 
                <div class="input-div">
-                  <input type="text" name="email" id="email" required>
+                  <input type="text" name="email" id="email" required value="{{ Request::old('email') ?: '' }}">
                   <label for="email">email</label>
                </div>
 
@@ -54,7 +48,8 @@ register
                </div>
                <label><input type="checkbox" id="show-password">show password</label>
                
-            <input type="submit" value="submit">
+            
+            <button type="submit" class="submit-button">submit</button>
          </form>
       
 

@@ -12,13 +12,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/home','App\Http\Controllers\HomeController@home_page')->name('home');
 
-Route::get('/', function () {
-    return view('register');
-});
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/', 'App\Http\Controllers\AuthController@register_page')->name('register');
+Route::post('/register/submit', 'App\Http\Controllers\AuthController@submit_register');
 
-Route::post('/register/submit', 'App\Http\Controllers\registerController@submit');
+
+Route::get('/login', 'App\Http\Controllers\AuthController@login_page')->name('login');
+Route::post('/login/submit', 'App\Http\Controllers\AuthController@submit_login');
+
+

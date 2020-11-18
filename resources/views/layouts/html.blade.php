@@ -8,18 +8,19 @@
     <link rel="stylesheet" href="css/app.css">
     <title>@yield('title')</title>
 </head>
-<body @yield('boddy-class')>
+<body class="boddy d-flex flex-column {{$body}}">
     
         <div class="navbar">
             <h1>Navigation</h1>
+            <button class="btn btn btn-secondary ml-auto" id="theme-button">light/dark theme</button>
         </div>
 
 
          @yield('content')
 
 
-        <div class="footer navbar">
-            <h4>footer</h4>
+        <div class="footer navbar ">
+            <h2>footer</h2>
         </div>
 
     <script src="js/app.js"></script>

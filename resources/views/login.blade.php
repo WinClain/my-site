@@ -1,4 +1,4 @@
-@extends('html')
+@extends('layouts.html')
 
 
 
@@ -7,10 +7,6 @@ login
 @endsection
 
 
-
-@section('boddy-class')
-    class='body-welcome dark-theme'
-@endsection
 
 @section('content')
           
@@ -42,7 +38,7 @@ login
                </div>
                <label><input type="checkbox" id="show-password">show password</label>
                
-            <input type="submit" value="submit">
+               <button type="submit" class="submit-button">submit</button>
          </form>
       
 
