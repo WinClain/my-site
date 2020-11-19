@@ -5,6 +5,8 @@
     background: transparent;
 }
 
+
+
 html,body{
     height: 100%;
 }
@@ -13,21 +15,92 @@ html,body{
     transition: .5s;
 }
 
-.light-theme .navbar{
-    background: white;
-    color: black;
-}
-
-.dark-theme .navbar{
-    background: black;
-    color: rgb(197, 197, 197);
-}
-
 /* HOME PAGE */
 /* ||||||||| */
 
-.body-home{
+.body-home.dark-theme{
+    background: url(/img/bg-dark-4765.gif);
+    color: rgb(160, 160, 160);
     
+}
+
+.body-home.light-theme{
+    background:#000 url(/img/bg-light-4828.png);
+    color: rgb(73, 73, 73);
+}
+
+.body-home .navbar .navbar-buttons .navbar-button{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.body-home .navbar .navbar-button{
+    position: relative;
+    font-size: 20px;
+    padding: 3px 6px;
+}
+
+.body-home .navbar .navbar-buttons .auth-links ul{
+    position: absolute;
+    left: -5px;
+    list-style: none;
+    text-align: center;
+    transition: .5s;
+    display: none;
+}
+
+.body-home .navbar .navbar-buttons .auth-links:hover  ul{
+    display: block;
+}
+
+.body-home .navbar .navbar-buttons .auth-links ul li{
+    position: relative;
+    margin: 5px 0px;
+    padding: 5px 0px;
+}
+
+.body-home .navbar .navbar-buttons .auth-links ul li a{
+    text-decoration: none;
+    color: gray;
+    text-transform: none;
+    text-transform: uppercase;
+}
+
+.body-home .navbar .navbar-buttons .navbar-button::before,
+.body-home .navbar .navbar-buttons .navbar-button::after,
+.body-home .navbar .navbar-buttons .auth-links ul li::before{
+    position: absolute;
+    content: '';
+    width:100%;
+    height: 2px;
+    background: gray;
+    left: 0;
+    opacity: 0;
+    transition: .3s;
+}
+
+
+.body-home .navbar .navbar-buttons .navbar-button::before{
+    top: 0;
+    transform: translateY(-5px);
+}    
+    
+.body-home .navbar .navbar-buttons .navbar-button::after,
+.body-home .navbar .navbar-buttons .auth-links ul li::before{
+    bottom: 0;
+    transform: translateY(10px);
+}    
+
+.body-home .navbar .navbar-buttons .navbar-button:hover::before,
+.body-home .navbar .navbar-buttons .navbar-button:hover::after,
+.body-home .navbar .navbar-buttons .auth-links ul li:hover::before{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+.body-home .container{
+    margin: auto;
 }
 
 
@@ -36,11 +109,8 @@ html,body{
 
 
 
-
-
-
-
-
+/* END HOME PAGE */
+/* ||||||||||||| */
 
 
 
@@ -49,12 +119,48 @@ html,body{
 /*AUTH FORM*/
 /* ||||||| */
 
+.body-auth.light-theme .navbar{
+    background: white;
+    color: black;
+}
+
+.body-auth.dark-theme .navbar{
+    background: black;
+    color: rgb(197, 197, 197);
+}
 
 .body-auth{
     width: 100%;
     height:100%;
     background: url(/img/rabstol_net_canada_31.jpg) center top no-repeat fixed ;
     background-size: cover;
+}
+
+.body-auth .header .navbar-buttons .home-button a{
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: gray; 
+    padding-bottom: 3px;
+}
+
+.body-auth .header .navbar-buttons .home-button a::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: gray;
+    bottom: -10px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.body-auth .header .navbar-buttons .home-button a:hover::before{
+    bottom: 0;
+    opacity: 1;
 }
 
 .form-auth{
@@ -197,3 +303,8 @@ html,body{
     bottom: 0;
     opacity: 1;
 }
+
+
+
+/*END AUTH FORM*/
+/* ||||||||||| */

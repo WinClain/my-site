@@ -5,7 +5,11 @@
 register
 @endsection
 
-
+@section('navbar-buttons')
+   <div class="home-button">
+      <a href="{{route('home')}}">home</a>
+   </div>
+@endsection
 
 @section('content')
           
@@ -15,15 +19,7 @@ register
 
                @csrf
 
-               @if ($errors->any())
-                  <div class="alert--error-valid">
-                     <ul>
-                        @foreach ($errors->all() as $error)
-                              <li>{{$error}}</li>
-                        @endforeach
-                     </ul>
-                  </div>
-               @endif
+               @include('layouts.alert')
 
                <div class="input-div  input-100">
                     <div class="input-name">

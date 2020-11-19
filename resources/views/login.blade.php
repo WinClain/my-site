@@ -6,7 +6,11 @@
 login
 @endsection
 
-
+@section('navbar-buttons')
+   <div class="home-button">
+      <a href="{{route('home')}}">home</a>
+   </div>
+@endsection
 
 @section('content')
           

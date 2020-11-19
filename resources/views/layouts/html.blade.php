@@ -10,9 +10,12 @@
 </head>
 <body class="boddy d-flex flex-column {{$body}}">
     
-        <div class="navbar">
+        <div class="navbar header">
             <h1>Navigation</h1>
-            <button class="btn btn btn-secondary ml-auto" id="theme-button">light/dark theme</button>
+            <div class="navbar-buttons ml-auto mr-4 d-flex">
+            @yield('navbar-buttons')
+            </div>
+            <button class="btn btn btn-secondary " id="theme-button">light/dark theme</button>
         </div>
 
 

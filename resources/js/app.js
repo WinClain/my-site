@@ -4,7 +4,7 @@ let boddyPage = document.querySelector('.boddy');
 let buttonTheme = document.querySelector('#theme-button');
 let passwordInput = document.querySelector('.input-password');
 let checkShowPassword = document.querySelector('#show-password');
-
+let aboutMeButton = document.querySelector('#about-me-button');
 
 buttonTheme.onclick = function(){
     if(boddyPage.classList.contains('dark-theme')){

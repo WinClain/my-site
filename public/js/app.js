@@ -19347,6 +19347,7 @@ var boddyPage = document.querySelector('.boddy');
 var buttonTheme = document.querySelector('#theme-button');
 var passwordInput = document.querySelector('.input-password');
 var checkShowPassword = document.querySelector('#show-password');
+var aboutMeButton = document.querySelector('#about-me-button');
 
 buttonTheme.onclick = function () {
   if (boddyPage.classList.contains('dark-theme')) {
