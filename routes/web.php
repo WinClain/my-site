@@ -13,16 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/',function(){
-    $body = 'body-home dark-theme';
+    $body = 'body-home';
     return view('home-page')->with('body',$body);
 })->name('home');
 
 
 Route::get('/register', 'App\Http\Controllers\AuthController@register_page')->name('register');
-Route::post('/register/submit', 'App\Http\Controllers\AuthController@submit_register');
+Route::post('/register', 'App\Http\Controllers\AuthController@submit_register');
 
 
 Route::get('/login', 'App\Http\Controllers\AuthController@login_page')->name('login');
-Route::post('/login/submit', 'App\Http\Controllers\AuthController@submit_login');
+Route::post('/login', 'App\Http\Controllers\AuthController@submit_login');
 
 

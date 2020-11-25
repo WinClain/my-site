@@ -7,42 +7,40 @@ login
 @endsection
 
 @section('navbar-buttons')
-   <div class="home-button">
-      <a href="{{route('home')}}">home</a>
+   <div class="navbar-button">
+      <a href="{{route('home')}}">главная</a>
+   </div>
+   <div class="navbar-button">
+      <a href="{{route('register')}}">регистрация</a>
    </div>
 @endsection
 
 @section('content')
           
    
-            <form action="/login/submit" method="post" class="form-auth">
-               <h3>login</h3>
+            <form action="/login" method="post" class="form-auth">
+               <h3>авторизация</h3>
 
                @csrf
 
-                  @if ($errors->any())
-                    <div class=" alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                              <li>{{$error}}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                      
-                  @endif
+                 @include('layouts.alert')
 
                <div class="input-div">
-                  <input type="text" name="email" id="email" required>
+                  <input type="text" name="email" id="email" required value="{{ Request::old('email') ?: '' }}">
                   <label for="email">email</label>
                </div>
 
                <div class="input-div">
                   <input class="input-password" type="password" name="password" id="password" required>
-                  <label for="password">password</label>
+                  <label for="password">пароль</label>
                </div>
-               <label><input type="checkbox" id="show-password">show password</label>
+
+               <div class="check-boxs">
+                  <label><input type="checkbox" id="show-password">показать пароль</label>
+                  <label><input type="checkbox" id="show-password" name="remember">запомнить меня</label>
+               </div>
                
-               <button type="submit" class="submit-button">submit</button>
+               <button type="submit" class="submit-button">отправить</button>
          </form>
       
 

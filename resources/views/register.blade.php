@@ -6,16 +6,19 @@ register
 @endsection
 
 @section('navbar-buttons')
-   <div class="home-button">
-      <a href="{{route('home')}}">home</a>
+   <div class="navbar-button">
+      <a href="{{route('home')}}">главная</a>
+   </div>
+   <div class="navbar-button">
+      <a href="{{route('login')}}">войти</a>
    </div>
 @endsection
 
 @section('content')
           
    
-            <form action="/register/submit" method="post" class="form-auth">
-               <h3>register</h3>
+            <form action="/register" method="post" class="form-auth">
+               <h3>регистрация</h3>
 
                @csrf
 
@@ -24,11 +27,11 @@ register
                <div class="input-div  input-100">
                     <div class="input-name">
                       <input type="text" name="name" id="name" required value="{{ Request::old('name') ?: '' }}">
-                      <label for="name"> name</label>
+                      <label for="name">имя</label>
                     </div>
                     <div class="input-name">
                       <input type="text" name="lastname" id="lastname" required value="{{ Request::old('lastname') ?: '' }}">
-                      <label for="lastname">lastname</label>
+                      <label for="lastname">фамилия</label>
                     </div> 
                   
                </div>
@@ -40,12 +43,12 @@ register
 
                <div class="input-div">
                   <input class="input-password" type="password" name="password" id="password" required>
-                  <label for="password">password</label>
+                  <label for="password">пароль</label>
                </div>
-               <label><input type="checkbox" id="show-password">show password</label>
+               <label><input type="checkbox" id="show-password">покзать пароль</label>
                
             
-            <button type="submit" class="submit-button">submit</button>
+            <button type="submit" class="submit-button">отправить</button>
          </form>
       
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +8,17 @@
     <link rel="stylesheet" href="css/app.css">
     <title>@yield('title')</title>
 </head>
-<body class="boddy d-flex flex-column {{$body}}">
+<body class="body d-flex flex-column dark-theme {{$body}}">
     
         <div class="navbar header">
             <h1>Navigation</h1>
             <div class="navbar-buttons ml-auto mr-4 d-flex">
             @yield('navbar-buttons')
             </div>
-            <button class="btn btn btn-secondary " id="theme-button">light/dark theme</button>
+            <button class=" button-theme" id="theme-button">
+                <span class='theme-button-span'></span>
+                 Theme
+            </button>
         </div>
 
 
@@ -26,6 +29,7 @@
             <h2>footer</h2>
         </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
