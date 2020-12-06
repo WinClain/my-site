@@ -10,24 +10,22 @@
 </head>
 <body class="body d-flex flex-column dark-theme {{$body}}">
     
-        <div class="navbar header">
-            <h1>Navigation</h1>
+        <div class="navbar">
+            <h4>My site</h4>
             <div class="navbar-buttons ml-auto mr-4 d-flex">
             @yield('navbar-buttons')
             </div>
-            <button class=" button-theme" id="theme-button">
-                <span class='theme-button-span'></span>
-                 Theme
-            </button>
+            <div class=" button-theme" id="theme-button">
+                <img src="" alt="moon">
+                <span>Theme</span>
+            </div>
         </div>
 
 
          @yield('content')
 
 
-        <div class="footer navbar ">
-            <h2>footer</h2>
-        </div>
+        
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="js/app.js"></script>

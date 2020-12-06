@@ -7,10 +7,10 @@ register
 
 @section('navbar-buttons')
    <div class="navbar-button">
-      <a href="{{route('home')}}">главная</a>
+      <a href="{{route('home')}}">Главная</a>
    </div>
    <div class="navbar-button">
-      <a href="{{route('login')}}">войти</a>
+      <a href="{{route('login')}}">Войти</a>
    </div>
 @endsection
 
@@ -41,11 +41,13 @@ register
                   <label for="email">email</label>
                </div>
 
-               <div class="input-div">
-                  <input class="input-password" type="password" name="password" id="password" required>
-                  <label for="password">пароль</label>
+               <div class="input-div input-100 password-hidden" id="password-div">
+                  <div class="div-input-password">
+                     <input class="input-password" type="password" name="password" id="password" required>
+                     <label for="password">пароль</label>
+                  </div>
+                  <img src="" id="show-password" alt="показать пароль">
                </div>
-               <label><input type="checkbox" id="show-password">покзать пароль</label>
                
             
             <button type="submit" class="submit-button">отправить</button>

@@ -8,10 +8,10 @@ login
 
 @section('navbar-buttons')
    <div class="navbar-button">
-      <a href="{{route('home')}}">главная</a>
+      <a href="{{route('home')}}">Главная</a>
    </div>
    <div class="navbar-button">
-      <a href="{{route('register')}}">регистрация</a>
+      <a href="{{route('register')}}">Регистрация</a>
    </div>
 @endsection
 
@@ -30,14 +30,12 @@ login
                   <label for="email">email</label>
                </div>
 
-               <div class="input-div">
-                  <input class="input-password" type="password" name="password" id="password" required>
-                  <label for="password">пароль</label>
-               </div>
-
-               <div class="check-boxs">
-                  <label><input type="checkbox" id="show-password">показать пароль</label>
-                  <label><input type="checkbox" id="show-password" name="remember">запомнить меня</label>
+               <div class="input-div input-100 password-hidden" id="password-div">
+                  <div class="div-input-password">
+                     <input class="input-password" type="password" name="password" id="password" required>
+                     <label for="password">пароль</label>
+                  </div>
+                  <img src="" id="show-password" alt="показать пароль">
                </div>
                
                <button type="submit" class="submit-button">отправить</button>
