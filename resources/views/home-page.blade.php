@@ -6,6 +6,15 @@ home-page
 
 @section('navbar-buttons')
 
+    <div class="navbar-element-with-ul phone-ul">
+        <img id="phone" src="" alt="">
+        <span>Связаться со мной</span>
+        <ul>
+            <li>(o66) 414 68 84</li>
+            <li>(096) 964 35 00</li>
+        </ul>
+    </div>
+
     <div class="about-me-button navbar-button" id="about-me-button">
         <span>Обо мне</span>
     </div>
@@ -14,12 +23,9 @@ home-page
             
         @if (Auth::check())
             <div class="img-name-lastname--users navbar-element-with-ul ml-2">
-                <div class="user-picture rounded-circle mr-2"></div>
                 <span>{{ Auth::user()->getName() }}</span>
                 <ul>
-                    <li><a href=""> Редактировать </a></li>
-                    <li>Выйти</li>
-
+                    <li><a href="{{ route('logout')}}">Выйти</a></li>
                 </ul>
             </div>
         @else
@@ -179,6 +185,27 @@ home-page
                         </ul>
                     </div>
                 </div>
+                <p>В младшей школе был отличником, в средней уже стал спускаться по оценкам, по класике гулял, не делал домашнее задание,
+                 начал увлекаться психологией человека, в 13 искал работу и устроился курьером на небольшую компанию по полиграфие, там стал
+                  более ответственым так как часто мне доверяли документы и передачу денег, паралельно думал много о будущем и професии,
+                только вот был полностью уверен что образование тут не обязательно, в принципе и сейчас так думаю,поступил для галочки а сам 
+                в это время учил графический дизайн, инвестиции, криптовалюта, аналитика, SMM, сейчас занимаюсь саморазвитием
+                (чтение, английский да и програмирование здесь очень кстати), заканчиваю 3 курс.</p>
+            </div>
+            
+            <div class="footer">
+
+                <div class="footer-container">
+                    <div>
+                        <span><img src="/img/Kyivstar.png" alt="">(096) 964 35 00</span>
+                        <span><img src="/img/Vodafone.png" alt="">(o66) 414 68 84</span>
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com/taras.leochko"><img src="/img/facebook.png" alt="">facebook</a>
+                        <a href="https://www.instagram.com/_bez.serdechnuy_/"><img src="/img/instagram.png" alt="">Instagram</a>
+                    </div>
+                </div>
+
             </div>
 
             <button type="button" id="up-button">↑</button>

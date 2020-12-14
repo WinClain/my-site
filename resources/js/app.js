@@ -9,11 +9,13 @@ $(function(){
             $('.form-auth .input-div img').attr('src', ($('#password-div').hasClass('password-hidden')) ? '/img/invisible-white.png' : '/img/visible-white.png');
             $('.about-left img').attr('src','/img/qualities-white.png');
             $('.about-right img').attr('src','/img/adds-white.png');
+            $('#phone').attr('src', '/img/phone-white.png');
         }else{
             $('.navbar #theme-button img').attr('src','/img/sun.png');
             $('.form-auth .input-div img').attr('src', ($('#password-div').hasClass('password-hidden')) ? '/img/invisible-black.png' : '/img/visible-black.png');
             $('.about-left img').attr('src','/img/qualities-black.png');
             $('.about-right img').attr('src','/img/adds-black.png');
+            $('#phone').attr('src', '/img/phone-black.png');
         }
     };
 
@@ -46,7 +48,7 @@ $(function(){
     })
 
     $(window).scroll(function(){
-        if($(window).scrollTop() >= 1200){
+        if($(window).scrollTop() >= 1400){
             $('#up-button').show();
         }else{
             $('#up-button').hide();

@@ -18,11 +18,13 @@ Route::get('/',function(){
 })->name('home');
 
 
-Route::get('/register', 'App\Http\Controllers\AuthController@register_page')->name('register');
-Route::post('/register', 'App\Http\Controllers\AuthController@submit_register');
+Route::get('/register', 'App\Http\Controllers\AuthController@register_page')->name('register')->middleware('guest');
+Route::post('/register', 'App\Http\Controllers\AuthController@submit_register')->middleware('guest');
 
 
-Route::get('/login', 'App\Http\Controllers\AuthController@login_page')->name('login');
-Route::post('/login', 'App\Http\Controllers\AuthController@submit_login');
+Route::get('/login', 'App\Http\Controllers\AuthController@login_page')->name('login')->middleware('guest');
+Route::post('/login', 'App\Http\Controllers\AuthController@submit_login')->middleware('guest');
+
+Route::get('/logout', 'App\Http\Controllers\AuthController@logout')->name('logout');
 
 
