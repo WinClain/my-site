@@ -28,4 +28,12 @@ class LoginRequest extends FormRequest
             'password' => 'min:8|max:32'
         ];
     }
+
+    public function messages(){
+        return [
+            'email.email' => 'Поле email должно содержать email !',
+            'password.min' => 'Поле password должно содержать более 8 символов !',
+            'password.max' => 'Поле password должно содержать менее 32 символов !'
+        ];
+    }
 }

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\RegisterRequest;
 use App\Http\Requests\loginRequest;
 use App\Models\users;
 use Auth;
@@ -15,7 +14,7 @@ class AuthController extends Controller
         return view('register')->with('body',$body);
     }
 
-    public function submit_register(RegisterRequest $req){
+    public function submit_register(loginRequest $req){
         
         $user = new users();
         $user->name = $req->input('name');

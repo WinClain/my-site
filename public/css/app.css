@@ -67,7 +67,7 @@ body {
 }
 .navbar .img-name-lastname--users ul {
   width: 100%;
-  bottom: -85px;
+  bottom: -50px;
   left: -8px;
 }
 .navbar .navbar-element-with-ul {
@@ -111,7 +111,7 @@ body {
 }
 .navbar .phone-ul ul {
   left: 45px;
-  top: 18px;
+  top: 20px;
 }
 .navbar .phone-ul ul li {
   padding: 5px 10px;
@@ -516,8 +516,10 @@ body {
 .alert.alert--success {
   height: 100px;
   background: rgba(112, 231, 96, 0.6);
-  color: #0b2400;
   font-size: 20px;
+}
+.alert.alert--success p {
+  color: #0b2400;
 }
 .alert.alert--error {
   background: rgba(253, 64, 73, 0.6);

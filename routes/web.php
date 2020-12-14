@@ -12,10 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/',function(){
-    $body = 'body-home';
-    return view('home-page')->with('body',$body);
-})->name('home');
+Route::get('/','App\Http\Controllers\HomeController@home_page')->name('home');
 
 
 Route::get('/register', 'App\Http\Controllers\AuthController@register_page')->name('register')->middleware('guest');
