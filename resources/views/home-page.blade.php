@@ -50,7 +50,8 @@ home-page
 
             <div class="visit-card">
                 <div class="picture--name">
-                    <div class="picture rounded-circle m-auto"></div>
+                    <img src="/img/my-photo.jpg" alt="my-photo" class="picture rounded-circle m-auto">
+                    
                     <h2>Taрac Леочко</h2>
                 </div>
                 <div class="job-vacance">

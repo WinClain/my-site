@@ -157,9 +157,8 @@ body {
   flex-direction: column;
 }
 .body-home .content .visit-card .picture--name .picture {
-  width: 350px;
+  width: 280px;
   height: 350px;
-  background: white;
 }
 .body-home .content .visit-card .picture--name h2 {
   font-size: 2.5em;
