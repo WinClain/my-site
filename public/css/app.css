@@ -62,13 +62,14 @@ body {
   left: -25px;
 }
 .navbar .img-name-lastname--users {
+  min-width: 50px;
   font-size: 17px;
   font-weight: 500;
+  text-align: center;
 }
 .navbar .img-name-lastname--users ul {
   width: 100%;
-  bottom: -50px;
-  left: -8px;
+  bottom: -45px;
 }
 .navbar .navbar-element-with-ul {
   position: relative;

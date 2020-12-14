@@ -12,7 +12,7 @@
     
         <div class="navbar">
             <h4>My site</h4>
-            <div class="navbar-buttons ml-auto mr-4 d-flex">
+            <div class="navbar-buttons ml-auto mr-5 d-flex">
             @yield('navbar-buttons')
             </div>
             <div class=" button-theme" id="theme-button">

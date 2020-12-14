@@ -140,7 +140,7 @@ $(function () {
     }, 300);
   });
   $(window).scroll(function () {
-    if ($(window).scrollTop() >= 1400) {
+    if ($(window).scrollTop() >= 1700) {
       $('#up-button').show();
     } else {
       $('#up-button').hide();
